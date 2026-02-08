@@ -2,7 +2,8 @@
 
 Selamat datang di repositori mata kuliah Machine Learning. Semua praktikum menggunakan Google Colab dan Cloud-native tools.
 
-**Dosen Pengampu:** Ronggo Bintang Pangestu 
+**Dosen Pengampu:** Ronggo Bintang Pangestu
+
 **Institusi:** STIKom El Rahma
 
 ## 📅 Silabus Singkat
