@@ -22,11 +22,8 @@ Untuk menjaga efisiensi repositori, kita **tidak mengunggah file data besar (.cs
 
 ---
 
-⚠️ Lisensi
+## ⚠️ Lisensi
 Seluruh dataset di atas digunakan untuk tujuan edukasi akademik. Harap merujuk pada lisensi masing-masing penyedia data (Kaggle/Hugging Face) sebelum penggunaan komersial.
-
-
----
 
 ### Penjelasan Mengapa Ini Penting:
 1.  **Transparansi:** Mahasiswa tahu dari minggu pertama dataset apa saja yang akan mereka "hadapi".
