@@ -1,102 +1,65 @@
-# 📑 Laporan Praktikum Minggu 5: Decision Tree & Random Forest
+# Laporan Praktikum Minggu 5: Advanced Ensemble & Handling Imbalance
 
 **Informasi Mahasiswa:**
-
 * **Nama:** [Isi Nama Anda]
 * **NIM:** [Isi NIM Anda]
 * **Link W&B Project:** [Paste Link Dashboard W&B Anda]
-* **Link Pull Request GitHub:** [Paste Link PR Tugas Anda]
 
 ---
 
-## 1. Pendahuluan & Konsep Dasar
+## 1. Analisis Awal: Masalah Imbalance
+Berdasarkan pengecekan `value_counts()` pada dataset asli:
+* Berapa jumlah transaksi Normal (Kelas 0)?
+* Berapa jumlah transaksi Penipuan (Kelas 1)?
+* **Analisis:** Mengapa metrik **Accuracy** tidak boleh digunakan sebagai acuan utama dalam dataset ini?
 
-Jelaskan dengan ringkas pemahaman Anda mengenai:
-
-1. Apa itu **Gini Impurity** dan bagaimana algoritma menggunakannya untuk membelah data?
-2. Mengapa **Random Forest** sering kali lebih akurat dan lebih stabil (tidak mudah *overfitting*) dibandingkan satu pohon keputusan tunggal?
-
-> **Jawaban:** (Tulis penjelasan Anda di sini)
-
----
-
-## 2. Analisis Visual Decision Tree (Dataset Wine)
-
-Berdasarkan hasil `plot_tree` pada Blok 3 di Notebook Anda:
-
-1. **Root Node:** Fitur apa yang digunakan untuk pembelahan pertama kali? Mengapa fitur tersebut dipilih sebagai "akar"?
-2. **Kedalaman Pohon:** Sebutkan fitur yang muncul di kedalaman ke-2.
-3. **Purity:** Temukan satu kotak "Leaf Node" (ujung pohon). Berapa nilai Gini-nya? Jelaskan apa arti nilai Gini tersebut.
-
-> **Jawaban:** (Tulis analisis visual Anda di sini)
+> **Jawaban:** (Tulis analisis Anda di sini)
 
 ---
 
-## 3. Perbandingan Model: Tree vs Forest
+## 2. Implementasi SMOTE (Synthetic Minority Over-sampling Technique)
+Lampirkan perbandingan jumlah data sebelum dan sesudah SMOTE:
 
-Isi tabel perbandingan akurasi berdasarkan eksperimen pada dataset Wine:
+| Kondisi | Jumlah Data Kelas 0 | Jumlah Data Kelas 1 |
+| :--- | :--- | :--- |
+| Sebelum SMOTE | ... | ... |
+| Sesudah SMOTE | ... | ... |
 
-| Model | Accuracy Score | Kelebihan/Kekurangan |
-| --- | --- | --- |
-| **Decision Tree (Single)** | ... | ... |
-| **Random Forest (Ensemble)** | ... | ... |
 
-**Analisis:** Mengapa terdapat perbedaan akurasi di antara keduanya? Manakah yang lebih Anda percayai untuk digunakan pada data baru?
 
----
-
-## 4. Tugas Inti: Random Forest vs Titanic (Kritis)
-
-Berdasarkan tugas implementasi pada dataset Titanic:
-
-**A. Hyperparameter Tuning:**
-Tuliskan hasil akurasi saat Anda mengubah jumlah pohon (`n_estimators`):
-
-* `n_estimators = 10`  : [Isi Akurasi]
-* `n_estimators = 50`  : [Isi Akurasi]
-* `n_estimators = 200` : [Isi Akurasi]
-* **Analisis:** Apakah menambah jumlah pohon selalu meningkatkan akurasi secara signifikan?
-
-**B. Feature Importance (Wajib):**
-Lihat grafik tingkat kepentingan fitur yang Anda hasilkan.
-
-1. Sebutkan 3 fitur paling penting menurut model Random Forest Anda!
-2. **Analisis Kritis:** Pada Minggu 4 (Logistic Regression), fitur `Sex` mungkin terlihat sangat dominan. Di Random Forest Minggu 5 ini, apakah fitur seperti `Fare` (Harga Tiket) atau `Age` (Umur) naik tingkat kepentingannya? Mengapa model berbasis pohon bisa melihat hubungan yang tidak tertangkap oleh model linear?
-
-> **Jawaban:** (Tulis analisis kritis fitur di sini)
+**Analisis:** Jelaskan bagaimana SMOTE bekerja "menciptakan" data baru untuk menyeimbangkan kelas penipuan.
 
 ---
 
-## 5. Perbandingan dengan Minggu 4
+## 3. Perbandingan Model: Bagging vs Boosting
+Isi tabel perbandingan performa pada **Data Test**:
 
-Bandingkan performa **Logistic Regression (Minggu 4)** dan **Random Forest (Minggu 5)** untuk kasus Titanic.
+| Metrik | Random Forest (Bagging) | XGBoost (Boosting) |
+| :--- | :--- | :--- |
+| **Accuracy** | ... | ... |
+| **AUPRC** | ... | ... |
+| **Recall (Kelas 1)** | ... | ... |
+| **Precision (Kelas 1)** | ... | ... |
 
-* Model mana yang memberikan akurasi lebih tinggi?
-* Berdasarkan pemahaman Anda, mengapa dataset Titanic mungkin lebih cocok diselesaikan dengan algoritma berbasis "pohon" daripada "garis linear"?
+**Pertanyaan Kritis:**
+1. Model mana yang memiliki nilai **Recall** tertinggi untuk transaksi Fraud (Kelas 1)? Mengapa nilai Recall sangat krusial bagi sebuah Bank?
+2. Berdasarkan hasil **AUPRC**, model mana yang paling stabil dalam membedakan penipu di tengah ribuan transaksi normal?
 
-> **Jawaban:** (Tulis refleksi perbandingan di sini)
-
----
-
-## 6. Dokumentasi Weights & Biases (W&B)
-
-Lampirkan *screenshot* dashboard W&B Anda yang menunjukkan perbandingan metrik antara Decision Tree dan Random Forest.
-
-> **[Tempel Screenshot W&B Anda di Sini]**
-
----
-
-## 7. Kesimpulan & Refleksi
-
-Apa hal paling menarik yang Anda pelajari tentang cara "berpikir" sebuah pohon keputusan? Apa kendala teknis yang Anda temui selama praktikum ini?
+> **Jawaban:** (Tulis analisis perbandingan di sini)
 
 ---
 
-### Instruksi Pengumpulan:
+## 4. Analisis Confusion Matrix
+Lihat kuadran **False Negative** (Asli Fraud, tapi ditebak Normal) pada model terbaik Anda:
+* Berapa jumlah penipu yang berhasil "lolos" dari deteksi model Anda?
+* Jika Anda adalah manajer risiko bank, langkah apa yang akan Anda ambil untuk meminimalkan angka tersebut?
 
-1. Lengkapi laporan ini dengan analisis mendalam.
-2. Simpan sebagai **PDF** atau **Markdown** (`.md`).
-3. Pastikan folder tugas Anda rapi: `assignments/week-5/NIM_NAMA/` berisi file `.ipynb` dan laporan ini.
-4. Lakukan **Pull Request** ke repositori utama.
+
 
 ---
+
+## 5. Kesimpulan & Dokumentasi W&B
+* Apa kesimpulan Anda mengenai efektivitas SMOTE dalam meningkatkan kemampuan model mendeteksi penipuan?
+* Lampirkan screenshot grafik AUPRC dari dashboard W&B Anda.
+
+> **[Tempel Screenshot Dashboard W&B di Sini]**
