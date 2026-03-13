@@ -50,9 +50,9 @@ Perhatikan grafik *Confusion Matrix* yang dihasilkan di Blok 5.
 
 ---
 
-## 5. Eksperimen Mandiri (Tugas Inti)
+## 5. Eksperimen Mandiri (Hyperparameter Tuning)
 
-Lakukan perubahan pada parameter `hidden_layer_sizes` (misal menjadi hanya satu layer `(32,)` atau ditambah menjadi tiga layer `(256, 128, 64)`). 
+Lakukan perubahan pada parameter `hidden_layer_sizes, learning_rate_init & alpha` (misal menjadi hanya satu layer `(32,)` atau ditambah menjadi tiga layer `(256, 128, 64)`). 
 Isi tabel di bawah ini berdasarkan hasil eksplorasi Anda:
 
 | Eksperimen | Arsitektur (Layers) | Learning Rate | Alpha | Akurasi Akhir | Catatan (Cepat/Lambat?) |
@@ -60,6 +60,14 @@ Isi tabel di bawah ini berdasarkan hasil eksplorasi Anda:
 | Baseline | (128, 64) | 0.001 | 0.0001 | ... | ... |
 | Eksperimen 1 | ... | ... | ... | ... | ... |
 | Eksperimen 2 | ... | ... | ... | ... | ... |
+| Eksperimen 3 | ... | ... | ... | ... | ... |
+| Eksperimen 4 | ... | ... | ... | ... | ... |
+| Eksperimen 5 | ... | ... | ... | ... | ... |
+| Eksperimen 6 | ... | ... | ... | ... | ... |
+| Eksperimen 7 | ... | ... | ... | ... | ... |
+| Eksperimen 8 | ... | ... | ... | ... | ... |
+| Eksperimen 9 | ... | ... | ... | ... | ... |
+| Eksperimen 10 | ... | ... | ... | ... | ... |
 
 **Analisis Hasil Eksplorasi:**
 1. Apa yang terjadi pada grafik **Loss** jika Learning Rate disetel terlalu besar?
