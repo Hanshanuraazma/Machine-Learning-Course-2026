@@ -52,11 +52,18 @@ Perhatikan grafik *Confusion Matrix* yang dihasilkan di Blok 5.
 
 ## 5. Eksperimen Mandiri (Tugas Inti)
 
-Lakukan dua kali perubahan pada parameter `hidden_layer_sizes` (misal menjadi hanya satu layer `(32,)` atau ditambah menjadi tiga layer `(256, 128, 64)`).
+Lakukan perubahan pada parameter `hidden_layer_sizes` (misal menjadi hanya satu layer `(32,)` atau ditambah menjadi tiga layer `(256, 128, 64)`). 
+Isi tabel di bawah ini berdasarkan hasil eksplorasi Anda:
 
-* **Arsitektur Baru:** [Sebutkan layer yang dicoba]
-* **Akurasi Baru:** [Isi akurasi setelah diubah]
-* **Analisis:** Apakah menambah atau mengurangi jumlah neuron selalu membuat model lebih akurat? Apa dampak yang Anda rasakan pada kecepatan waktu pelatihan (*training time*)?
+| Eksperimen | Arsitektur (Layers) | Learning Rate | Alpha | Akurasi Akhir | Catatan (Cepat/Lambat?) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Baseline | (128, 64) | 0.001 | 0.0001 | ... | ... |
+| Eksperimen 1 | ... | ... | ... | ... | ... |
+| Eksperimen 2 | ... | ... | ... | ... | ... |
+
+**Analisis Hasil Eksplorasi:**
+1. Apa yang terjadi pada grafik **Loss** jika Learning Rate disetel terlalu besar?
+2. Dari semua kombinasi yang Anda coba, manakah yang memberikan hasil terbaik (Akurasi tertinggi dengan waktu training wajar)?
 
 ---
 
