@@ -21,13 +21,13 @@ Neural Network adalah sekumpulan algoritma yang dirancang untuk mengenali pola. 
 ## 2. Multi-Layer Perceptron (MLP)
 MLP adalah jenis jaringan saraf *feed-forward* yang memiliki setidaknya satu lapisan tersembunyi (*hidden layer*).
 
+Proses belajar NN:
+1. **Forward Pass:** Data masuk, dihitung dengan bobot, dan menghasilkan prediksi.
+2. **Loss Calculation:** Menghitung seberapa jauh prediksi dari jawaban asli.
+3. **Backward Pass (Backpropagation):** Memperbaiki bobot ($w$) dan bias ($b$) berdasarkan nilai kesalahan menggunakan *Gradient Descent*.
+
 ## 3. Parameter Penting (Hyperparameters)
 Selain jumlah lapisan, "otak" ini memiliki tombol-tombol pengatur performa:
 * **Learning Rate ($lr$):** Seberapa besar langkah yang diambil model untuk memperbaiki kesalahan. Terlalu besar akan membuat model "melompati" solusi, terlalu kecil membuat proses belajar sangat lambat.
 * **Solver:** Algoritma yang melakukan optimasi bobot (misal: 'adam' yang adaptif atau 'sgd' yang klasik).
 * **Alpha ($\alpha$):** Parameter regularisasi untuk mencegah model terlalu "menghafal" data (Overfitting).
-
-Proses belajar NN:
-1. **Forward Pass:** Data masuk, dihitung dengan bobot, dan menghasilkan prediksi.
-2. **Loss Calculation:** Menghitung seberapa jauh prediksi dari jawaban asli.
-3. **Backward Pass (Backpropagation):** Memperbaiki bobot ($w$) dan bias ($b$) berdasarkan nilai kesalahan menggunakan *Gradient Descent*.
