@@ -21,3 +21,15 @@ LLM memiliki pengetahuan yang terbatas pada tanggal terakhir mereka dilatih (Kno
 4. **Store:** Menyimpan di Vector Database.
 5. **Retrieve:** Mencari potongan teks paling relevan dengan pertanyaan user.
 6. **Augment:** Mengirim teks tersebut ke LLM sebagai referensi jawaban.
+
+
+
+## 3. Cara Membuat API Key Gemini
+
+Untuk saat ini, pembuatan API Key paling mudah dilakukan melalui **Google AI Studio**. Berikut langkah-langkahnya:
+
+1.  **Kunjungi Google AI Studio:** Buka laman [aistudio.google.com](https://aistudio.google.com/).
+2.  **Login:** Masuk menggunakan akun Google Anda (disarankan menggunakan akun yang sama untuk keperluan akademik).
+3.  **Get API Key:** Pada menu di bilah samping (sidebar) sebelah kiri, klik tombol **"Get API key"**.
+4.  **Buat Key Baru:** Klik tombol **"Create API key in new project"** atau pilih proyek Google Cloud yang sudah ada.
+5.  **Simpan Key Anda:** Setelah muncul, salin API Key tersebut. **Peringatan:** Dilarang mengunggah API Key ke repositori publik di GitHub agar tidak disalahgunakan orang lain.
