@@ -33,3 +33,6 @@ Untuk saat ini, pembuatan API Key paling mudah dilakukan melalui **Google AI Stu
 3.  **Get API Key:** Pada menu di bilah samping (sidebar) sebelah kiri, klik tombol **"Get API key"**.
 4.  **Buat Key Baru:** Klik tombol **"Create API key in new project"** atau pilih proyek Google Cloud yang sudah ada.
 5.  **Simpan Key Anda:** Setelah muncul, salin API Key tersebut. **Peringatan:** Dilarang mengunggah API Key ke repositori publik di GitHub agar tidak disalahgunakan orang lain.
+
+### Sample:
+https://github.com/ronggobp/pdf-ai-chatbot
