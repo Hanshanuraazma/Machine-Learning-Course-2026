@@ -1,9 +1,3 @@
-Rekan Sejawat, laporan praktikum ini saya susun agar mahasiswa tidak hanya mengandalkan kode, tetapi mampu melakukan "bedah materi" terhadap bagaimana mesin memahami bahasa manusia. 
-
-Berikut adalah draf **TEMPLATE_LAPORAN.md** dan tugas eksplorasi tambahan untuk **Minggu 10**.
-
----
-
 # 📑 Laporan Praktikum Minggu 10: Natural Language Processing (NLP)
 
 **Informasi Mahasiswa:**
